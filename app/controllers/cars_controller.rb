@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+  before_action :require_user_logged_in!
   before_action :set_car, only: %i[ show edit update destroy ]
 
   # GET /cars or /cars.json
